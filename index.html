@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+<script>
+
+
+    function Temperature (c) {
+        this.celsius = c;
+        this.convertToFahrenheit = function (){
+            return c*1.8+32;
+        }
+        this.convertToKelvin = function () {
+            return c + 273.15;
+        }
+    }
+
+    let temperature = new Temperature(37);
+    document.write(temperature.celsius + '<br>');
+    document.write(temperature.convertToFahrenheit() + '<br>');
+    document.write(temperature.convertToKelvin() + '<br>');
+</script>
+</body>
+</html>
